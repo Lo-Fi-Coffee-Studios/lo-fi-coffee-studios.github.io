@@ -19,6 +19,11 @@
 			background-color: rgba(255, 255, 255, 0.308);
 			cursor: pointer;
 		}
+		.disabled {
+			pointer-events: none;
+			opacity: 0.5;
+			cursor: not-allowed;
+		}
 	</style>
 	
 	
@@ -73,44 +78,56 @@
 								
 								<h3 class="minor">✧ Modded Server</h3>
 								<p>Modded Server Ip: </i><span class="copyButton3 ip-highlight" onclick="copyText(this)">mc.loficostudios.com:25567</span><br>Mod Link: <a href="https://legacy.curseforge.com/minecraft/modpacks/lcs-modded-rpg" target="_blank"><u>Curseforge.com</u></a><br></p>
-								
+
 							
 								<script>
 									function copyText(element) {
-										var ipAddressSpan = element;
-										var originalText = ipAddressSpan.innerText; // Store the original text
+										var originalText = element.innerText; // Store the original text
+										var originalHtml = element.innerHTML; // Store the original HTML content
 										var ipAddress = originalText;
-							
+								
+										// Disable the element to prevent copying during cooldown
+										element.classList.add('disabled');
+										element.removeAttribute('onclick');
+								
 										// Create a temporary textarea element
 										var textarea = document.createElement("textarea");
 										textarea.value = ipAddress;
+										textarea.style.position = 'fixed'; // Ensure it is not displayed off-screen
 										document.body.appendChild(textarea);
-							
+								
 										// Select the text and copy it
 										textarea.select();
 										document.execCommand("copy");
-							
+								
 										// Cleanup
 										document.body.removeChild(textarea);
-							
-										// Change the text to "Copied!"
-										ipAddressSpan.innerHTML = "<i class='fas fa-check'></i> Copied!";
-							
-										// After 2 seconds, revert back to original text
-										setTimeout(function() {
-											ipAddressSpan.innerHTML = originalText;
+								
+										// After copying, temporarily update the content to "Copied!"
+										element.innerHTML = "<i class='fas fa-check'></i> Copied!";
+								
+										// After 2 seconds, revert back to original text and enable the element
+										setTimeout(function () {
+											element.innerHTML = originalHtml;
+											element.classList.remove('disabled');
+											element.setAttribute('onclick', 'copyText(this)');
 										}, 2000);
-							
+								
 										// Alert the user
 										alert('IP Address copied to clipboard: ' + ipAddress);
 									}
 								</script>
+								
+								
+								
+								
+								
 							</article>
 
 						<!-- Work -->
 							<article id="work">
 								<h1 class="major">Projects</h1>
-								<h2 class="minor">✧ Proj. Aiko プロジェクトあいこ</h2>
+								<h2 class="minor">✧ Proj. Aiko プロジェクトアイコ</h2>
 								<p>Turned Based Gatcha Game. (3D)</p>
 								<h2 class="minor">✧ RPG Engine</h2>
 								<p>Fully fledge rpg engine, allowing for easy devolopment for games. (2D)</p>
