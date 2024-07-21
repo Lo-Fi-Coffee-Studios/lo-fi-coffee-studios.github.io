@@ -27,7 +27,7 @@
 		.ip-highlight:hover {
 			background-color: rgba(255, 255, 255, 0.308);
 			cursor: pointer;
-		}
+		}z
 		.disabled {
 			pointer-events: none;
 			opacity: 0.5;
@@ -55,41 +55,35 @@
 						</div>
 						<nav>
 							<ul>
-								<li><a href="#intro">Servers</a></li>
 								<li><a href="#projects">Projects</a></li>
+								<li><a href="#games">Games</a></li>
+								<li><a href="#minecraft">Minecraft</a></li>
 								<li><a href="#about">About</a></li>
 								<li><a href="#contact">Contact</a></li>
 								<!-- <li><a href="#elements">Elements</a></li> -->
 							</ul>
-							
 						</nav>
-						<!-- <ul class="icons">
-							<li><a href="https://github.com/Tonierbobcat" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-							<li><a href="https://discord.gg/jC78X4eVsn" class="fa-brands fa-discord"></a></li>
-						</ul> -->
 					</nav>
 				</nav>
 			</header>
-				<!-- <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi', '#29abe0', 'O4O1PFEJN');kofiwidget2.draw();</script>  -->
 
 				<!-- Main -->
 					<div id="main">
 
-						<!-- Intro -->
-							<article id="intro">
-								<h2 class="major">Modded Minecraft</h2>
+						<!-- Minecraft -->
+							<article id="minecraft">
+								<!-- <h2 class="major">Modded Minecraft</h2>
 								<span class="image main"><img src="img/pic01.jpg" alt="" /></span>
 								<h3 class="minor">✧ Modded Server</h3>
-								<!-- <p>Modded Server Ip: </i><span class="copyButton3 ip-highlight" onclick="copyText(this)">mc.loficostudios.com:25567</span><br>Mod Link: <a href="https://legacy.curseforge.com/minecraft/modpacks/lcs-modded-rpg" target="_blank"><u>Curseforge.com</u></a><br></p> -->
-								<p>Modded Server Ip: <span class="copyButton3 ip-highlight" onclick="copyText(this)"><i class="far fa-copy"></i>mc.loficostudios.com:25567</span><br>Mod Link: <a href="https://legacy.curseforge.com/minecraft/modpacks/lcs-modded-rpg" target="_blank"><u>Curseforge.com</u></a><br></p>
+			
+								<p>Modded Server Ip: <span class="moddedserverip ip-highlight" onclick="copyText(this)"><i class="far fa-copy"></i>mc.loficostudios.com:25567</span><br>Mod Link: <a href="https://legacy.curseforge.com/minecraft/modpacks/lcs-modded-rpg" target="_blank"><u>Curseforge.com</u></a><br></p>
+								-->
 								<h2 class="major">Vanilla Minecraft</h2>
 								<h3 class="minor">✧ SMP Server (WIP)</h3>
-								<p>SMP Server Ip: </i><span class="copyButton2 ip-highlight" onclick="copyText(this)"><i class="far fa-copy"></i>mc.loficostudios.com:25566</span></p>
+								<p>SMP Server Ip: </i><span class="smpserverip ip-highlight" onclick="copyText(this)"><i class="far fa-copy"></i>mc.loficostudios.com:25566</span></p>
 								<h3 class="minor">✧ RPG Server (Coming Soon..)</h3>
-								<p>LCS Server Ip: <span class="copyButton1 ip-highlight" onclick="copyText(this)"><i class="far fa-copy"></i>mc.loficostudios.com</span></p>
+								<p>RPG Server Ip: <span class="lcsserverip ip-highlight" onclick="copyText(this)"><i class="far fa-copy"></i>mc.loficostudios.com</span></p>
 								
-
-							
 								<script>
 									function copyText(element) {
 										var originalText = element.innerText; // Store the original text
@@ -127,20 +121,25 @@
 										// alert('IP Address copied to clipboard: ' + ipAddress);
 									}
 								</script>
-								
-								
-								
-								
-								
 							</article>
 
 						<!-- Projects -->
 							<article id="projects">
 								<h1 class="major">Projects</h1>
 								<h2 class="minor">✧ Senritsubooru 旋律ボール</h2>
+								
 								<p>
-									Senryuubooru is a <a href="https://github.com/rr-/szurubooru">Szurubooru</a> fork image board free from AI-Generated art to support artists.
-									AI art has become a major problem for artists as of late. Image boards such as
+									<strong>Links:</strong> <a href="https://github.com/Tonierbobcat/Senritsubooru"><u>Github</u></a>
+								</p>
+
+								<!-- Previews Images -->
+								<span class="image main">
+									<img src="img/SenritsubooruPostPreview.png"/>
+								</span>
+
+								<p>
+									Senryuubooru is an open-source <a href="https://github.com/rr-/szurubooru"><u>Szurubooru</u></a> fork, that is free from AI-Generated art to support artists.
+									AI Art has become a major problem for artists as of late. Because, image boards such as
 									<a href="https://github.com/rr-/szurubooru"><u>Pixiv</u></a> and
 									<a href="https://www.deviantart.com/"><u>DeviantArt</u></a> have become flooded with AI art. Unfortunately, these services do not have any policies that prevent users from posting AI-generated art.
 
@@ -151,10 +150,6 @@
 									"旋律" (Sen - ri - tsu) means melody in Japanese.
 								</p>
 
-								<p>
-									Links: <a href="https://github.com/Tonierbobcat/Senritsubooru"><u>Github</u></a> - <a href="https://imagebooru.loficostudios.com/"><u>Senritsubooru</u></a>
-								</p>
-
 								<h2 class="minor">✧ Melody API</h2>
 								<p>
 									Melody API is a free open-source API for Spigot development. Boosted-YAML assisted Config API, Menu API.
@@ -163,7 +158,10 @@
 								<p>
 									Links: <a href="https://github.com/Tonierbobcat/MelodyAPI"><u>Github</u></a>
 								</p>
+							</article>
 
+						<!-- Games -->
+							<article id="games">
 								<h1 class="major">Games</h1>
 								<h2 class="minor">✧ Proj. Aiko プロジェクトアイコ</h2>
 								<p>
@@ -462,7 +460,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 				<!-- Footer -->
 				<footer id="footer">
-					<p class="copyright">Copyright &copy;© 2024 Lofi Coffee Studios</p>
+					<p class="copyright">Copyright &copy; 2024 Lofi Coffee Studios</p>
 				</footer>
 
 			</div>
